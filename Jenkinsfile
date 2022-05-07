@@ -1,12 +1,12 @@
 pipeline {
   agent any
   tools {
-    maven 'Maven' 
+    maven 'MAVEN_HOME' 
   }
   stages {
     stage ('Build') {
       steps {
-        bat 'mvn clean install'
+        sh 'mvn clean install'
       }
     }
     stage ('Deploy') {
